@@ -1,16 +1,16 @@
 export const profile = {
   name: 'Liyakat Hussain',
-  role: 'Data Science & Machine Learning',
-  location: 'Srinagar, Jammu & Kashmir, India',
+  role: 'Machine Learning · Computer Vision · Generative AI',
+  location: 'Srinagar, India',
   phone: '+91 7889448874',
   email: 'liyakatakhoon@gmail.com',
   linkedin: 'https://www.linkedin.com/in/liyakathussain12/',
   github: 'https://github.com/liyakat-12',
   resume: '/Liyakat-Hussain-Resume.pdf',
   tagline:
-    'Final-year (8th semester) Computer Science Engineering student specializing in Data Science and Machine Learning, with hands-on experience building ML and deep learning models for real-world applications.',
+    'B.Tech Computer Science Engineering graduate (2026) from IUST Kashmir with hands-on experience in Machine Learning, Deep Learning, Computer Vision and Generative AI.',
   summary:
-    'Data Scientist at Sabudh Foundation and final-year Computer Science Engineering student at IUST, Pulwama. Skilled in data preprocessing, exploratory data analysis, SQL and machine learning algorithms with hands-on experience in deep learning, computer vision and RAG-based applications. Active in student council and campus recruitment coordination.',
+    'B.Tech Computer Science Engineering graduate (2026) from IUST Kashmir with hands-on experience in Machine Learning, Deep Learning, Computer Vision and Generative AI. Skilled in integrating machine learning models into applications and building AI-powered solutions using Python, FastAPI, OpenAI API and Retrieval-Augmented Generation.',
 }
 
 export const stats = [
@@ -22,13 +22,14 @@ export const stats = [
 
 export const experiences = [
   {
-    role: 'Data Scientist',
+    role: 'Data Science Intern',
     company: 'Sabudh Foundation',
-    period: 'Jul 2025 – Present',
-    current: true,
+    period: 'Jun 2025 – Jun 2026',
+    current: false,
     points: [
-      'Built and optimized Machine Learning, Deep Learning and Computer Vision models using Python, Scikit-learn, TensorFlow and PyTorch for real-world applications.',
-      'Performed data preprocessing, feature engineering and exploratory data analysis, then documented experiments and presented technical findings to the team.',
+      'Built and optimized Machine Learning, Deep Learning and Computer Vision models using Python, Scikit-learn, TensorFlow and PyTorch for real-world, industry-relevant applications.',
+      'Performed data preprocessing, feature engineering and exploratory data analysis (EDA) across multiple projects; documented experiments and presented technical findings to the team.',
+      'Collaborated with team members throughout the model development lifecycle, from data collection through model evaluation and reporting.',
     ],
   },
   {
@@ -38,32 +39,38 @@ export const experiences = [
     current: false,
     points: [
       'Analyzed datasets using Python, NumPy, Pandas, Matplotlib and Scikit-learn to support data-driven decision making.',
-      'Implemented machine learning algorithms and gained hands-on experience in predictive modeling.',
-    ],
-  },
-  {
-    role: 'AI/ML Intern',
-    company: 'InternPe',
-    period: 'Dec 2024',
-    current: false,
-    points: [
-      'Completed a focused AI/ML internship building and evaluating machine learning models on practical datasets.',
-      'Strengthened skills in data handling, model training and performance evaluation.',
-    ],
-  },
-  {
-    role: 'Web Development Intern',
-    company: 'Cognifyz Technologies',
-    period: 'Jul 2024 – Aug 2024',
-    current: false,
-    points: [
-      'Built and styled responsive web pages with hands-on front-end development experience.',
-      'Collaborated with the team to deliver tasks and improve development workflow.',
+      'Implemented machine learning algorithms including regression, classification and predictive modeling with hands-on project experience.',
     ],
   },
 ]
 
 export const projects = [
+  {
+    title: 'RAG Document Chatbot',
+    subtitle: 'Retrieval-Augmented Generation (RAG)',
+    highlight: 'PDF Q&A with citations',
+    description:
+      'A RAG-based document chatbot built with Python, FastAPI, LangChain, OpenAI API and Streamlit for intelligent PDF-based question answering.',
+    points: [
+      'Developed document ingestion, text chunking, vector embeddings and semantic retrieval for accurate context-aware search.',
+      'Implemented LLM-powered responses with source citations using Retrieval-Augmented Generation (RAG).',
+    ],
+    tags: ['Python', 'FastAPI', 'LangChain', 'OpenAI API', 'Streamlit', 'RAG'],
+    accent: 'from-violet-500/15 to-teal-700/10',
+  },
+  {
+    title: 'Sales Performance Dashboard',
+    subtitle: 'Power BI · DAX · Power Query',
+    highlight: '15+ KPI visuals',
+    description:
+      'An interactive sales dashboard in Power BI that appends multiple Excel sources, cleans data in Power Query and models table relationships for business reporting.',
+    points: [
+      'Appended multiple Excel sources, cleaned data in Power Query and modelled table relationships.',
+      'Wrote DAX measures (CALCULATE, SUMX, MTD/QTD/YTD) for revenue and profit KPIs across 15+ visuals with slicers and cross-filtering.',
+    ],
+    tags: ['Power BI', 'DAX', 'Power Query', 'Excel'],
+    accent: 'from-amber-500/15 to-teal-700/10',
+  },
   {
     title: 'Deepfake Image Detection',
     subtitle: 'Machine Learning & Deep Learning',
@@ -71,23 +78,23 @@ export const projects = [
     description:
       'A multi-method deepfake detection framework running 13 experiments across 5 model families including SVM, MLP, ResNet50, InceptionV3, EfficientNet-B0 and Vision Transformer (ViT-B16).',
     points: [
-      'Applied handcrafted feature extraction (LBP, GLCM, FFT) combined with transfer learning.',
-      'Trained on 140,000+ facial images, achieving 99.97% test accuracy with EfficientNet-B0.',
+      'Achieved 99.97% test accuracy with EfficientNet-B0 on 140,000+ facial images.',
+      'Applied handcrafted feature extraction (LBP, GLCM, FFT) alongside transfer learning and fine-tuning across classical ML and deep learning.',
     ],
     tags: ['EfficientNet-B0', 'ViT', 'ResNet50', 'Transfer Learning', 'OpenCV'],
     accent: 'from-teal-500/15 to-teal-700/10',
   },
   {
     title: 'Pothole Detection System',
-    subtitle: 'YOLO Object Detection & Stereo Vision',
-    highlight: 'Real-time road safety',
+    subtitle: 'Deep Learning · Road Safety',
+    highlight: 'Real-time driver alerts',
     description:
-      'A real-time pothole detection system built on the YOLO object detection model combined with stereo vision, designed for intelligent road safety and hazard mitigation.',
+      'A deep learning based pothole detection system with GPS localization and real-time driver alert mechanisms for intelligent road safety.',
     points: [
-      'Trained a YOLO model for fast, accurate pothole detection from live road imagery.',
-      'Fused stereo-vision depth estimation with GPS localization and driver alerts for real-time hazard notification.',
+      'Developed a deep learning based pothole detection system for intelligent road safety.',
+      'Integrated GPS localization and real-time driver alert mechanisms for hazard notification.',
     ],
-    tags: ['YOLO', 'Deep Learning', 'Stereo Vision', 'Object Detection', 'GPS', 'OpenCV'],
+    tags: ['Deep Learning', 'Object Detection', 'GPS', 'OpenCV'],
     accent: 'from-teal-600/15 to-cyan-700/10',
   },
   {
@@ -103,85 +110,34 @@ export const projects = [
     tags: ['MySQL', 'Database Design', 'Normalization', 'ER Modeling'],
     accent: 'from-slate-500/15 to-teal-600/10',
   },
-  {
-    title: 'Movie Recommendation System',
-    subtitle: 'Content-Based Filtering',
-    highlight: 'Personalized results',
-    description:
-      'A content-based recommendation system using cosine similarity and feature vectorization on processed movie metadata.',
-    points: [
-      'Generated personalized movie recommendations from processed metadata.',
-      'Implemented feature vectorization and similarity scoring for relevance.',
-    ],
-    tags: ['Python', 'Cosine Similarity', 'NLP', 'Scikit-learn'],
-    accent: 'from-teal-500/10 to-slate-600/10',
-  },
-  {
-    title: 'RAG Document Chatbot',
-    subtitle: 'Retrieval-Augmented Generation (RAG)',
-    highlight: 'PDF Q&A with citations',
-    description:
-      'A RAG-based document chatbot built with Python, FastAPI, LangChain, OpenAI API and Streamlit for intelligent PDF-based question answering.',
-    points: [
-      'Developed document ingestion, text chunking, vector embeddings and semantic retrieval for accurate context-aware search.',
-      'Implemented LLM-powered responses with source citations using Retrieval-Augmented Generation (RAG).',
-    ],
-    tags: ['Python', 'FastAPI', 'LangChain', 'OpenAI API', 'Streamlit', 'RAG'],
-    accent: 'from-violet-500/15 to-teal-700/10',
-  },
 ]
 
 export const skills = [
   {
-    category: 'Programming Languages',
-    items: ['Python', 'C', 'C++', 'SQL'],
+    category: 'Languages',
+    items: ['Python', 'SQL', 'C', 'C++'],
   },
   {
     category: 'Machine Learning',
-    items: [
-      'Supervised Learning',
-      'Unsupervised Learning',
-      'Scikit-learn',
-      'Feature Engineering',
-      'Model Evaluation',
-    ],
+    items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenCV', 'NumPy', 'Pandas', 'XGBoost'],
   },
   {
-    category: 'Deep Learning',
-    items: [
-      'CNN',
-      'Transfer Learning',
-      'EfficientNet-B0',
-      'ResNet50',
-      'InceptionV3',
-      'TensorFlow',
-      'PyTorch',
-      'Vision Transformer (ViT)',
-    ],
-  },
-  {
-    category: 'Natural Language Processing',
-    items: ['Text Preprocessing', 'Tokenization', 'TF-IDF', 'Word Embeddings'],
-  },
-  {
-    category: 'Computer Vision',
-    items: ['OpenCV', 'Image Classification', 'Object Detection', 'LBP', 'GLCM', 'FFT'],
+    category: 'Backend',
+    items: ['FastAPI', 'Streamlit', 'LangChain', 'OpenAI API'],
   },
   {
     category: 'Databases',
-    items: ['MySQL', 'SQL', 'Database Design', 'Normalization', 'ER Modeling', 'MongoDB'],
+    items: ['MySQL', 'MongoDB'],
   },
   {
-    category: 'Libraries',
-    items: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'OpenCV', 'Scikit-learn'],
-  },
-  {
-    category: 'Tools & Frameworks',
-    items: ['Git', 'GitHub', 'FastAPI', 'LangChain', 'Streamlit', 'Jupyter Notebook', 'Google Colab', 'Kaggle', 'Excel'],
+    category: 'Analytics & BI',
+    items: ['Power BI', 'DAX', 'Power Query', 'Excel'],
   },
 ]
 
-export const topSkills = ['SQL', 'Deep Learning', 'Machine Learning Algorithms']
+export const spokenLanguages = ['English', 'Urdu', 'Kashmiri']
+
+export const topSkills = ['Machine Learning', 'Deep Learning', 'Generative AI']
 
 export const certifications = [
   {
@@ -278,16 +234,16 @@ export const certifications = [
 ]
 
 export const achievements = [
+  'Co-Organizer, Bit Byte 2025 (IUST)',
   'Campus Recruitment Coordinator, IUST',
   'Student Council Member, IUST',
-  'Co-Organizer, Bit Byte 2025',
-  'Participant, Tech Summit 2025',
-  'Participant, People10 Hackathon',
+  'Participant in Tech Summit (Organised by IUST)',
+  'Participant in People10 Hackathons (Organised by People10 Technology)',
 ]
 
 export const education = {
-  institution: 'Islamic University of Science & Technology (IUST), Pulwama',
-  degree: 'Bachelor of Technology in Computer Science Engineering',
-  period: 'Aug 2022 – Jul 2026',
-  cgpa: '7.8 / 10',
+  institution: 'Islamic University of Science and Technology (IUST), Kashmir',
+  degree: 'B.Tech, Computer Science Engineering',
+  period: 'Aug 2022 – July 2026',
+  cgpa: '8.01 / 10',
 }

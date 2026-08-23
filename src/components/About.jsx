@@ -1,12 +1,12 @@
-import { profile, education, topSkills } from '../data'
+import { profile, education, topSkills, spokenLanguages } from '../data'
 import Reveal, { SectionHeading } from './Reveal'
 import { CheckIcon } from './icons'
 
 const focus = [
   'Machine Learning & Deep Learning',
-  'Data Preprocessing & EDA',
-  'Model Evaluation & Tuning',
-  'Feature Engineering',
+  'Computer Vision',
+  'Generative AI & RAG',
+  'Model Integration with FastAPI',
 ]
 
 export default function About() {
@@ -15,8 +15,8 @@ export default function About() {
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading
           kicker="About"
-          title="Data-driven problem solving"
-          description="Building analytical skills into production-ready machine learning solutions."
+          title="Building AI-powered solutions"
+          description="Integrating machine learning models into applications with Python, FastAPI and RAG."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
@@ -53,7 +53,7 @@ export default function About() {
             <h3 className="mt-4 font-display text-xl font-semibold text-heading">{education.degree}</h3>
             <p className="mt-2 text-sm leading-relaxed text-body">{education.institution}</p>
             <p className="chip mt-3 rounded-sm px-3 py-2 text-xs font-semibold">
-              Final year · 8th semester
+              Graduate · 2026
             </p>
             <div className="mt-6 flex items-center justify-between border-t border-theme pt-5">
               <div>
@@ -64,6 +64,10 @@ export default function About() {
                 <div className="text-xs font-medium text-muted">CGPA</div>
                 <div className="mt-1 font-display text-lg font-semibold text-accent">{education.cgpa}</div>
               </div>
+            </div>
+            <div className="mt-5 border-t border-theme pt-5">
+              <div className="text-xs font-medium text-muted">Languages</div>
+              <p className="mt-1 text-sm font-semibold text-heading">{spokenLanguages.join(' · ')}</p>
             </div>
           </Reveal>
         </div>

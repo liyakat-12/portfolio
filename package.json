@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "resume": "node scripts/generate-resume.mjs",
-    "prebuild": "node scripts/generate-resume.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

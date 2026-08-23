@@ -10,6 +10,7 @@ import {
   skills,
   certifications,
   achievements,
+  spokenLanguages,
 } from '../src/data.js'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -21,7 +22,8 @@ const MUTED = '#4b5563'
 const LINE = '#d1d5db'
 
 const doc = new PDFDocument({ size: 'A4', margin: 40 })
-doc.pipe(fs.createWriteStream(outPath))
+const stream = fs.createWriteStream(outPath)
+doc.pipe(stream)
 
 const pageWidth = doc.page.width - doc.page.margins.left - doc.page.margins.right
 const left = doc.page.margins.left
@@ -73,7 +75,7 @@ doc
   .font('Helvetica')
   .fontSize(10.5)
   .fillColor(ACCENT)
-  .text('Data Science · Machine Learning · Deep Learning', { characterSpacing: 0.3 })
+  .text(profile.role, { characterSpacing: 0.3 })
 doc.moveDown(0.25)
 doc
   .font('Helvetica')
@@ -89,23 +91,14 @@ doc
     ].join('   |   '),
   )
 
-doc.moveDown(0.35)
+heading('Professional Summary')
 doc.font('Helvetica').fontSize(9).fillColor(MUTED).text(profile.summary, {
   width: pageWidth,
   lineGap: 1,
 })
 
-// ---- Education ----
-heading('Education')
-doc.font('Helvetica-Bold').fontSize(10).fillColor(DARK).text(education.institution)
-doc
-  .font('Helvetica')
-  .fontSize(9)
-  .fillColor(MUTED)
-  .text(`${education.degree}  |  ${education.period}  |  CGPA: ${education.cgpa}`)
-
-// ---- Experience ----
-heading('Experience')
+// ---- Internships ----
+heading('Internships')
 experiences.forEach((exp) => {
   ensureSpace(56)
   const y = doc.y
@@ -135,7 +128,7 @@ projects.forEach((p) => {
 })
 
 // ---- Skills ----
-heading('Technical Skills')
+heading('Skills')
 skills.forEach((group) => {
   ensureSpace(24)
   const y = doc.y
@@ -147,16 +140,34 @@ skills.forEach((group) => {
   doc.font('Helvetica').fillColor(MUTED).text(group.items.join(', '))
   doc.moveDown(0.08)
 })
+ensureSpace(20)
+doc
+  .font('Helvetica-Bold')
+  .fontSize(9)
+  .fillColor(DARK)
+  .text('Languages: ', { continued: true })
+doc.font('Helvetica').fillColor(MUTED).text(spokenLanguages.join(', '))
 
 // ---- Certifications ----
-heading('Certifications')
+heading('Certifications & Training')
 certifications.forEach((c) =>
   bullet(`${c.title} — ${c.issuer}${c.issued ? ` (${c.issued})` : ''}`),
 )
 
+// ---- Education ----
+heading('Education')
+doc.font('Helvetica-Bold').fontSize(10).fillColor(DARK).text(education.institution)
+doc
+  .font('Helvetica')
+  .fontSize(9)
+  .fillColor(MUTED)
+  .text(`${education.degree}  |  ${education.period}  |  CGPA: ${education.cgpa}`)
+
 // ---- Achievements ----
-heading('Achievements')
+heading('Achievements & Awards')
 achievements.forEach(bullet)
 
+stream.on('finish', () => {
+  console.log('Resume PDF generated at', outPath)
+})
 doc.end()
-console.log('Resume PDF generated at', outPath)

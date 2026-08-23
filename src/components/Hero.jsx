@@ -71,16 +71,16 @@ export default function Hero() {
                 <code>
                   <span className="text-blue-300">class</span>{' '}
                   <span className="text-slate-100">DataScientist</span>:{'\n'}
-                  {'  '}focus = <span className="text-emerald-300">"ML & Deep Learning"</span>{'\n'}
+                  {'  '}focus = <span className="text-emerald-300">"ML, CV & Generative AI"</span>{'\n'}
                   {'  '}stack = [<span className="text-emerald-300">"Python"</span>,{' '}
-                  <span className="text-emerald-300">"Scikit-learn"</span>,{' '}
+                  <span className="text-emerald-300">"FastAPI"</span>,{' '}
                   <span className="text-emerald-300">"PyTorch"</span>]{'\n'}
-                  {'  '}skills = [<span className="text-emerald-300">"EDA"</span>,{' '}
-                  <span className="text-emerald-300">"Model Evaluation"</span>]{'\n\n'}
+                  {'  '}skills = [<span className="text-emerald-300">"RAG"</span>,{' '}
+                  <span className="text-emerald-300">"OpenAI API"</span>]{'\n\n'}
                   {'  '}<span className="text-blue-300">def</span>{' '}
-                  <span className="text-slate-100">solve</span>(self, data):{'\n'}
+                  <span className="text-slate-100">build</span>(self, idea):{'\n'}
                   {'    '}<span className="text-blue-300">return</span>{' '}
-                  <span className="text-emerald-300">"data-driven insights"</span>
+                  <span className="text-emerald-300">"AI-powered solutions"</span>
                 </code>
               </pre>
             </div>
