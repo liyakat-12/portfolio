@@ -10,7 +10,7 @@ export const profile = {
   tagline:
     'Final-year (8th semester) Computer Science Engineering student specializing in Data Science and Machine Learning, with hands-on experience building ML and deep learning models for real-world applications.',
   summary:
-    'Final-year (8th semester) Computer Science Engineering student specializing in Data Science and Machine Learning, with hands-on experience in building machine learning and deep learning models. Skilled in data preprocessing, exploratory data analysis, and model evaluation. Passionate about solving real-world problems using data-driven approaches.',
+    'Data Scientist at Sabudh Foundation and final-year Computer Science Engineering student at IUST, Pulwama. Skilled in data preprocessing, exploratory data analysis, SQL and machine learning algorithms with hands-on experience in deep learning, computer vision and RAG-based applications. Active in student council and campus recruitment coordination.',
 }
 
 export const stats = [
@@ -22,9 +22,9 @@ export const stats = [
 
 export const experiences = [
   {
-    role: 'Data Science Intern',
+    role: 'Data Scientist',
     company: 'Sabudh Foundation',
-    period: 'Jun 2025 – Present',
+    period: 'Jul 2025 – Present',
     current: true,
     points: [
       'Built and optimized Machine Learning, Deep Learning and Computer Vision models using Python, Scikit-learn, TensorFlow and PyTorch for real-world applications.',
@@ -39,6 +39,26 @@ export const experiences = [
     points: [
       'Analyzed datasets using Python, NumPy, Pandas, Matplotlib and Scikit-learn to support data-driven decision making.',
       'Implemented machine learning algorithms and gained hands-on experience in predictive modeling.',
+    ],
+  },
+  {
+    role: 'AI/ML Intern',
+    company: 'InternPe',
+    period: 'Dec 2024',
+    current: false,
+    points: [
+      'Completed a focused AI/ML internship building and evaluating machine learning models on practical datasets.',
+      'Strengthened skills in data handling, model training and performance evaluation.',
+    ],
+  },
+  {
+    role: 'Web Development Intern',
+    company: 'Cognifyz Technologies',
+    period: 'Jul 2024 – Aug 2024',
+    current: false,
+    points: [
+      'Built and styled responsive web pages with hands-on front-end development experience.',
+      'Collaborated with the team to deliver tasks and improve development workflow.',
     ],
   },
 ]
@@ -156,8 +176,8 @@ export const skills = [
     items: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'OpenCV', 'Scikit-learn'],
   },
   {
-    category: 'Tools',
-    items: ['Git', 'GitHub', 'Jupyter Notebook', 'Google Colab', 'Kaggle', 'Excel'],
+    category: 'Tools & Frameworks',
+    items: ['Git', 'GitHub', 'FastAPI', 'LangChain', 'Streamlit', 'Jupyter Notebook', 'Google Colab', 'Kaggle', 'Excel'],
   },
 ]
 
@@ -266,7 +286,7 @@ export const achievements = [
 ]
 
 export const education = {
-  institution: 'Islamic University of Science & Technology (IUST), Kashmir',
+  institution: 'Islamic University of Science & Technology (IUST), Pulwama',
   degree: 'Bachelor of Technology in Computer Science Engineering',
   period: 'Aug 2022 – Jul 2026',
   cgpa: '7.8 / 10',

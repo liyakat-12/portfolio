@@ -81,13 +81,19 @@ doc
   .fillColor(MUTED)
   .text(
     [
-      'Srinagar, India',
+      profile.location,
       profile.phone,
       profile.email,
       'linkedin.com/in/liyakathussain12',
       'github.com/liyakat-12',
     ].join('   |   '),
   )
+
+doc.moveDown(0.35)
+doc.font('Helvetica').fontSize(9).fillColor(MUTED).text(profile.summary, {
+  width: pageWidth,
+  lineGap: 1,
+})
 
 // ---- Education ----
 heading('Education')
@@ -145,7 +151,7 @@ skills.forEach((group) => {
 // ---- Certifications ----
 heading('Certifications')
 certifications.forEach((c) =>
-  bullet(`${c.title} — ${c.issuer}${c.meta ? ` (${c.meta})` : ''}`),
+  bullet(`${c.title} — ${c.issuer}${c.issued ? ` (${c.issued})` : ''}`),
 )
 
 // ---- Achievements ----

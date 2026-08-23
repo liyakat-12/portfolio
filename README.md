@@ -29,6 +29,44 @@ portfolio/
     └── components/        # Navbar, Hero, About, Experience, Projects, Skills, Highlights, Contact, Footer
 ```
 
-## Editing content
+## Deploy
 
-All text — profile, stats, experience, projects, skills, certifications, education — lives in `src/data.js`. Update that file to change what the site displays.
+The site is ready to deploy. Build settings are already configured in `vercel.json` and `netlify.toml`.
+
+### Option A — Vercel (recommended)
+
+1. Push this project to GitHub (create a new repo at [github.com/new](https://github.com/new), then run):
+
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/liyakat-hussain-portfolio.git
+git push -u origin main
+```
+
+2. Go to [vercel.com/new](https://vercel.com/new) and import your GitHub repo.
+3. Vercel auto-detects Vite — click **Deploy**. Your site will be live at a `*.vercel.app` URL.
+
+**Or deploy from the terminal:**
+
+```bash
+npx vercel login
+npx vercel --prod
+```
+
+### Option B — Netlify (fastest, no GitHub needed)
+
+1. Build locally: `npm run build`
+2. Go to [app.netlify.com/drop](https://app.netlify.com/drop)
+3. Drag the `dist/` folder onto the page — done.
+
+For continuous deploys, connect a GitHub repo at [app.netlify.com](https://app.netlify.com) instead.
+
+### Option C — GitHub Pages
+
+1. Push to GitHub (same as Option A step 1).
+2. In repo **Settings → Pages**, set source to **GitHub Actions** and use a Vite deploy workflow, or deploy the `dist/` folder via Netlify/Vercel linked to the repo.
+
+---
+
+**Build command:** `npm run build`  
+**Publish directory:** `dist`
+
