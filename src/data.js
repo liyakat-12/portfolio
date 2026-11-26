@@ -1,7 +1,8 @@
+
 export const profile = {
   name: 'Liyakat Hussain',
   role: 'Machine Learning · Computer Vision · Generative AI',
-  location: 'Srinagar, India',
+  location: 'Bengaluru, India',
   phone: '+91 7889448874',
   email: 'liyakatakhoon@gmail.com',
   linkedin: 'https://www.linkedin.com/in/liyakathussain12/',
@@ -48,54 +49,106 @@ export const projects = [
   {
     title: 'RAG Document Chatbot',
     subtitle: 'Retrieval-Augmented Generation (RAG)',
-    highlight: 'PDF Q&A with citations',
+    highlight: 'Recall@4 89.1% · MRR 0.90',
     description:
-      'A RAG-based document chatbot built with Python, FastAPI, LangChain, OpenAI API and Streamlit for intelligent PDF-based question answering.',
+      'A document-grounded chatbot that answers questions from uploaded PDFs using hybrid retrieval, reranking and LLM-generated responses with citations.',
     points: [
-      'Developed document ingestion, text chunking, vector embeddings and semantic retrieval for accurate context-aware search.',
-      'Implemented LLM-powered responses with source citations using Retrieval-Augmented Generation (RAG).',
+      'Built document ingestion, chunking, embeddings and hybrid retrieval using FAISS and BM25 with Reciprocal Rank Fusion (RRF).',
+      'Added cross-encoder reranking and evaluated retrieval on 55 queries; Recall@4 improved from 78.9% to 89.1% and MRR from 0.77 to 0.90.',
     ],
-    tags: ['Python', 'FastAPI', 'LangChain', 'OpenAI API', 'Streamlit', 'RAG'],
+    tags: ['Python', 'FastAPI', 'LangChain', 'FAISS', 'BM25', 'RAG'],
+    github: 'https://github.com/liyakat-12/Rag-document-chatbot',
     accent: 'from-violet-500/15 to-teal-700/10',
+  },
+  {
+    title: 'MediAssist — Medical RAG Assistant',
+    subtitle: 'Healthcare Document Q&A · Retrieval-Augmented Generation',
+    highlight: '1,000+ curated medical notes',
+    description:
+      'A medical information assistant that retrieves evidence from a curated knowledge base, provides cited answers and supports symptom-based triage.',
+    points: [
+      'Built a retrieval pipeline with MiniLM embeddings, ChromaDB, reranking and source citations.',
+      'Added safety controls for emergency guidance, prescription/dosage requests and out-of-scope questions.',
+    ],
+    tags: ['Python', 'Streamlit', 'FastAPI', 'ChromaDB', 'MiniLM', 'RAG'],
+    github:
+      'https://github.com/liyakat-12/medical-diagnosis-assistant-llm-rag',
+    demo: 'https://mediassist-web-sigma.vercel.app',
+    api: 'https://mediassist-api-9yvb.onrender.com',
+    accent: 'from-emerald-500/15 to-teal-700/10',
+  },
+  {
+    title: 'Deepfake Image Detection',
+    subtitle: 'Machine Learning & Deep Learning · Team Project',
+    highlight: '99.97% reported test accuracy',
+    description:
+      'A multi-method deepfake detection framework evaluating classical machine learning and deep learning approaches on a balanced dataset of 140,000+ facial images.',
+    points: [
+      'Ran 13 experiments across methods including SVM, MLP, ResNet50, InceptionV3, EfficientNet-B0 and Vision Transformer (ViT-B16).',
+      'Reported 99.97% test accuracy with EfficientNet-B0; applied handcrafted features including LBP, GLCM and FFT alongside transfer learning.',
+    ],
+    tags: [
+      'EfficientNet-B0',
+      'ViT',
+      'ResNet50',
+      'SVM',
+      'OpenCV',
+      'Transfer Learning',
+    ],
+    github:
+      'https://github.com/SabudhFoundation/passion-project-deep-fake-identifiers',
+    accent: 'from-teal-500/15 to-teal-700/10',
+  },
+  {
+    title: 'Pothole Detection & Driver Alerting',
+    subtitle: 'Computer Vision · Road Safety',
+    highlight: 'YOLOv8n · RDD2022',
+    description:
+      'A road-damage detection system using YOLOv8n to identify potholes and support driver alerts with GPS-based hazard localization.',
+    points: [
+      'Trained and evaluated a YOLOv8n model on the RDD2022 Road Damage Dataset; reported 79.9% mAP@0.5, 84.3% precision and 78.9% recall.',
+      'Integrated GPS tagging, hazard alerts and a web dashboard for viewing detected road hazards.',
+    ],
+    tags: ['Python', 'YOLOv8', 'OpenCV', 'Computer Vision', 'GPS'],
+    github:
+      'https://github.com/liyakat-12/pothole-detection-and-driver-alerting',
+    demo:
+      'https://pothole-detection-and-driver-alerting.onrender.com',
+    accent: 'from-teal-600/15 to-cyan-700/10',
+  },
+  {
+    title: 'Market Intelligence & Demand Forecasting',
+    subtitle: 'Data Analytics · Forecasting · Decision Support',
+    highlight: '63% better than seasonal-naive baseline',
+    description:
+      'A market intelligence platform combining data preparation, demand forecasting and market opportunity scoring to support product-market decisions.',
+    points: [
+      'Built a SQL-backed data workflow and data-quality pipeline across 12 markets and 600 product-market combinations.',
+      'Evaluated weekly demand forecasts with MAE of 22.6 units/week, reported as 63% better than a seasonal-naive baseline.',
+    ],
+    tags: [
+      'Python',
+      'SQL',
+      'Forecasting',
+      'Data Quality',
+      'Analytics',
+    ],
+    github:
+      'https://github.com/liyakat-12/Market-Intelligence-Demand-Forecasting-Platform',
+    accent: 'from-blue-500/15 to-indigo-700/10',
   },
   {
     title: 'Sales Performance Dashboard',
     subtitle: 'Power BI · DAX · Power Query',
     highlight: '15+ KPI visuals',
     description:
-      'An interactive sales dashboard in Power BI that appends multiple Excel sources, cleans data in Power Query and models table relationships for business reporting.',
+      'An interactive sales dashboard in Power BI that combines multiple Excel sources, cleans data in Power Query and models table relationships for business reporting.',
     points: [
       'Appended multiple Excel sources, cleaned data in Power Query and modelled table relationships.',
       'Wrote DAX measures (CALCULATE, SUMX, MTD/QTD/YTD) for revenue and profit KPIs across 15+ visuals with slicers and cross-filtering.',
     ],
     tags: ['Power BI', 'DAX', 'Power Query', 'Excel'],
     accent: 'from-amber-500/15 to-teal-700/10',
-  },
-  {
-    title: 'Deepfake Image Detection',
-    subtitle: 'Machine Learning & Deep Learning',
-    highlight: '99.97% test accuracy',
-    description:
-      'A multi-method deepfake detection framework running 13 experiments across 5 model families including SVM, MLP, ResNet50, InceptionV3, EfficientNet-B0 and Vision Transformer (ViT-B16).',
-    points: [
-      'Achieved 99.97% test accuracy with EfficientNet-B0 on 140,000+ facial images.',
-      'Applied handcrafted feature extraction (LBP, GLCM, FFT) alongside transfer learning and fine-tuning across classical ML and deep learning.',
-    ],
-    tags: ['EfficientNet-B0', 'ViT', 'ResNet50', 'Transfer Learning', 'OpenCV'],
-    accent: 'from-teal-500/15 to-teal-700/10',
-  },
-  {
-    title: 'Pothole Detection System',
-    subtitle: 'Deep Learning · Road Safety',
-    highlight: 'Real-time driver alerts',
-    description:
-      'A deep learning based pothole detection system with GPS localization and real-time driver alert mechanisms for intelligent road safety.',
-    points: [
-      'Developed a deep learning based pothole detection system for intelligent road safety.',
-      'Integrated GPS localization and real-time driver alert mechanisms for hazard notification.',
-    ],
-    tags: ['Deep Learning', 'Object Detection', 'GPS', 'OpenCV'],
-    accent: 'from-teal-600/15 to-cyan-700/10',
   },
   {
     title: 'FinanceHub',
@@ -107,7 +160,12 @@ export const projects = [
       'Designed 15+ interconnected tables with primary keys, foreign keys and normalization.',
       'Built SQL scripts for database creation and data management enforcing data integrity.',
     ],
-    tags: ['MySQL', 'Database Design', 'Normalization', 'ER Modeling'],
+    tags: [
+      'MySQL',
+      'Database Design',
+      'Normalization',
+      'ER Modeling',
+    ],
     accent: 'from-slate-500/15 to-teal-600/10',
   },
 ]
@@ -119,7 +177,15 @@ export const skills = [
   },
   {
     category: 'Machine Learning',
-    items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenCV', 'NumPy', 'Pandas', 'XGBoost'],
+    items: [
+      'TensorFlow',
+      'PyTorch',
+      'Scikit-learn',
+      'OpenCV',
+      'NumPy',
+      'Pandas',
+      'XGBoost',
+    ],
   },
   {
     category: 'Backend',
@@ -135,9 +201,17 @@ export const skills = [
   },
 ]
 
-export const spokenLanguages = ['English', 'Urdu', 'Kashmiri']
+export const spokenLanguages = [
+  'English',
+  'Hindi',
+  'Kashmiri',
+]
 
-export const topSkills = ['Machine Learning', 'Deep Learning', 'Generative AI']
+export const topSkills = [
+  'Machine Learning',
+  'Deep Learning',
+  'Generative AI',
+]
 
 export const certifications = [
   {
@@ -147,7 +221,11 @@ export const certifications = [
     issued: 'Feb 2026',
     expires: 'Dec 2036',
     credentialId: 'UC-fe14b3df-a889-4f8d-b469-98035aa2524b',
-    skills: ['Machine Learning Algorithms', 'Supervised Learning', 'Model Evaluation'],
+    skills: [
+      'Machine Learning Algorithms',
+      'Supervised Learning',
+      'Model Evaluation',
+    ],
     description:
       'Comprehensive Machine Learning A-Z course covering AI fundamentals, data preprocessing, supervised and unsupervised learning, and model evaluation using Python and R with hands-on real-world projects.',
   },
