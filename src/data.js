@@ -322,6 +322,6 @@ export const achievements = [
 export const education = {
   institution: 'Islamic University of Science and Technology (IUST), Kashmir',
   degree: 'B.Tech, Computer Science Engineering',
-  period: 'Aug 2022 – July 2026',
-  cgpa: '8.01 / 10',
+  period: '2022 –  2026',
+  cgpa: '7.92 / 10',
 }
